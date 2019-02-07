@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_syncConnectionType"
+        android:title="Account"
+        android:entryValues="@array/pref_syncConnectionTypes_values"/>
+</PreferenceScreen>

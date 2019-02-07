@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/chooseAccountText"
+        android:text="Choose account"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_size"
+        android:padding="@dimen/padding_size"
+        />
+
+    <Spinner
+        android:id="@+id/chooseAccount"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </Spinner>
+
+
+    <TextView
+        android:id="@+id/hotelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="@dimen/padding_size"
+        android:text="Royal Plaza Hotel"
+        android:textColorHighlight="@color/colorAccent"
+        android:textSize="@dimen/large_size" />
+
+    <RatingBar
+        android:id="@+id/hotelRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:isIndicator="true"
+        android:rating="4.7"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/hotelAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="@dimen/padding_size"
+        android:text="193 Prince Edward Road West, Hong Kong"
+        android:textSize="@dimen/large_size" />
+
+    <ImageView
+        android:id="@+id/hotelImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:src="@drawable/hotel" />
+
+    <LinearLayout
+        android:id="@+id/reserveLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateFromText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size"
+                    android:text="From"
+                    android:textSize="@dimen/large_size" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/dateFromValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:text="01.11.2018"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:clickable="true"
+                        android:onClick="showDatePicker"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/calendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dateFromText"
+                        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateToText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size"
+                    android:text="To"
+                    android:textSize="@dimen/large_size" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/dateToValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:text="10.11.2018"/>
+
+                    <ImageButton
+                        android:id="@+id/dateToButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:clickable="true"
+                        android:onClick="showDatePicker"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/calendar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dateToText"
+                        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <Button
+            android:id="@+id/BookButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_size"
+            android:text="Reserve for 2000$"
+            android:onClick="reserve"
+            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/reservationInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:id="@+id/openTheDoorView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/keysImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingVertical="1dp"
+            android:src="@drawable/keys" />
+
+        <TextView
+            android:id="@+id/textTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_size"
+            android:text="To open the door bring your phone to the lock"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/large_size" />
+
+    </LinearLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.widget.ScrollView>
